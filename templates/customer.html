@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sparks</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -22,10 +23,10 @@
       <div class="links collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#">Home</a>
+            <a class="nav-link " aria-current="page" href="http://127.0.0.1:8000/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="customer.html">Customers</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/customer">Customers</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about-us">About Us</a>
@@ -45,7 +46,7 @@
     <table class="table table-hover ">
         <thead>
             <tr class="tablehed">
-                <th>Sl no</th>
+                <th>Id</th>
                 <th>Name</th>
                 <th>E-mail</th>
                 <th>Current Balance</th>
@@ -53,31 +54,16 @@
             </tr>
         </thead>
         <tbody>
+          {% for i in key %}
             <tr class="tbody">
-                <td>1</td>
-                <td>Clark</td>
-                <td>clarkkent@mail.com</td>
-                <td>2300</td>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.balance}}</td>
                 <td><button class="button"><a href="">Veiw Profile</a>
                 </button></td>
             </tr>
-            <tr class="tbody">
-                <td>1</td>
-                <td>Clark</td>
-                <td>clarkkent@mail.com</td>
-                <td>2300</td>
-                <td><button class="button"><a href="">Veiw Profile</a>
-                </button></td>
-            </tr> <tr class="tbody">
-                <td>1</td>
-                <td>Clark</td>
-                <td>clarkkent@mail.com</td>
-                <td>2300</td>
-                <td><button class="button"><a href="">Veiw Profile</a>
-                </button></td>
-            </tr>
-            
-            
+            {% endfor %}
         </tbody>
     </table>
 
