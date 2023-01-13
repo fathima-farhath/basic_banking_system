@@ -41,7 +41,10 @@
   <!-- navabar ends -->
   <div class="container">
     <br><br>
-    <h1 class="">Hi User...</h1><br>
+    {% for i in views %}
+    <h2 class="wel-cont">Hi, {{i.name}},<br>
+      welcome to Sparks Bank, Your best banking partner</h2><br>
+    {%endfor%}
     <table class="table table-hover ">
         <thead>
             <tr class="tablehed">
@@ -49,22 +52,22 @@
                 <th>Name</th>
                 <th>E-mail</th>
                 <th>Current Balance</th>
-                <th>Handle</th>
             </tr>
         </thead>
         <tbody>
+          {% for i in views %}
             <tr class="tbody">
-                <td>1</td>
-                <td>Clark</td>
-                <td>clarkkent@mail.com</td>
-                <td>2300</td>
-                <td><button class="button"><a href="">Veiw Profile</a>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.balance}}</td>
                 </button></td>
             </tr>
+          {% endfor %}
         </tbody>
     </table>
 
-    <section class="vh-100" style="background-color: #eee;">
+    <section class="vh-100" style="background-color:">
         <div class="container h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-12 col-xl-11">
@@ -79,7 +82,9 @@
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                           <div class="form-outline flex-fill mb-0">
-                            <input type="text" name="from" id="form3Example1c" class="form-control" placeholder="name" />
+                            {% for i in views%}
+                            <input type="text" name="from" id="form3Example1c" class="form-control" value="{{i.name}}" placeholder="name" />
+                            {% endfor%}
                           </div>
                         </div>
       
@@ -89,9 +94,9 @@
                             <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>To</option>
-                                <option value="1" name="to">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                {% for i in dd%}
+                                <option value="1" name="to">{{i.name}}</option>
+                                {%endfor%}
                               </select>
                         </div>
                         <div class="d-flex flex-row align-items-center mb-4">

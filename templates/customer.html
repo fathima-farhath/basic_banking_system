@@ -60,8 +60,7 @@
                 <td>{{i.name}}</td>
                 <td>{{i.email}}</td>
                 <td>{{i.balance}}</td>
-                <td><button class="button"><a href="">Veiw Profile</a>
-                </button></td>
+                <td><button class="button"><a href="{% url 'view' i.id %}">Veiw Profile</a></button></td>
             </tr>
             {% endfor %}
         </tbody>
