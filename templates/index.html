@@ -1,0 +1,138 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sparks</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+<body>
+    
+<div class="home">  
+   <!-- navbar -->
+  <nav class="navbar header navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><font class="hed">THE SPARKS Bank</font></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="links collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="customer.html">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+  </div>
+  </nav>
+  <!-- navbar ends -->
+  <!-- home body -->
+  <div class="bg">
+    <h2>Welcome to "<span>The Sparks Bank</span>"</h2>
+    <p>“In banking or finance, trust is the only thing you have to sell.”</p>
+  </div>
+  </div>  
+  <!-- home body ends -->
+  <!-- about us starts -->
+  <div class="container mt-3">
+    <div class="aboutus" id="about-us">
+      <h1>... About Us ...</h1><hr><br>
+      <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat perspiciatis aliquid, non inventore earum laboriosam distinctio totam dignissimos odio, doloremque reiciendis. Consequuntur nulla ipsam nemo tempora error assumenda, quasi labore.
+      Ut in esse voluptatum voluptate velit iste, doloribus quasi recusandae voluptas! Pariatur sequi nesciunt cupiditate quidem illo rerum libero! Harum blanditiis, odit optio hic quasi necessitatibus eaque ipsa quibusdam neque?
+      Architecto dolor enim eos. Totam aspernatur voluptatibus dignissimos velit aliquid eveniet quam enim nesciunt? Exercitationem mollitia nihil architecto dolorum officia, rerum temporibus sequi commodi molestiae? Et delectus sapiente nobis recusandae!
+      Repellendus laudantium nam, recusandae quis placeat amet ratione saepe molestias veritatis? Cupiditate ab earum harum esse reprehenderit, aperiam exercitationem facilis voluptates quaerat animi iure, quod laudantium in voluptas ex eius!
+</p>
+    </div>
+  </div>
+<!-- aboutus ends -->
+<!-- Contact Us starts -->
+  <div class="contact container-fluid" id="contact-us">
+  <div class="row p-5">
+    <div class="col-md-6 text-white contents">
+       <br><div class="one">
+        <i class="fa fa-building fa-2x" aria-hidden="true"></i><br>
+        <h4>Address</h4>
+       <h5>The golgen avenue</h5>
+       </div><br>
+       <div class="two">
+        <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+        <h4>Phone</h4>
+         <h5>91-9847057789</h5>
+       </div><br>
+       <div class="three">
+        <i class="fa fa-envelope fa-2x" aria-hidden="true"></i><br>
+        <h4>E-mail</h4>
+       <h5>sparks@gmail.com</h5>
+       </div>
+    </div>
+    <div class="col-md-6 form">
+      <h2>Leave a Message</h2><br>
+      <form>
+        <div class="form-group">
+          <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name">
+          </div><br>
+          <div>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+        </div><br>
+        <div class="form-group">
+          <textarea placeholder="Enter your message" className="form-control" value="" id="exampleFormControlTextarea1" cols="" rows="4"></textarea>       
+         </div><br>
+        <button type="submit" class="button">Submit</button>
+      </form>
+    </div>
+  </div>
+  </div>
+  <!-- contact us ends -->
+<!-- footer starts -->
+ <footer class="text-center text-lg-start bg-dark text-white">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom head">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block head1">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div class="icons">
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-facebook fa-1x" aria-hidden="true"></i>       </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-google fa-1x" aria-hidden="true"></i>       </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-instagram fa-1x" aria-hidden="true"></i>       </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-linkedin fa-1x" aria-hidden="true"></i>       </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-github fa-1x" aria-hidden="true"></i>       </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgb(61, 7, 238);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/"><span id="us">@</span>Sparks</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- footer ends -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+</html>
