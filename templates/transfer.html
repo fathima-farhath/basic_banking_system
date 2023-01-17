@@ -29,10 +29,10 @@
             <a class="nav-link" href="http://127.0.0.1:8000/customer">Customers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about-us">About Us</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/#about-us">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact-us">Contact</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/#contact-us">Contact</a>
           </li>
         </ul>
       </div>
@@ -42,8 +42,8 @@
   <div class="container">
     <br><br>
     {% for i in views %}
-    <h2 class="wel-cont">Hi, {{i.name}},<br>
-      welcome to Sparks Bank, Your best banking partner</h2><br>
+    <h2 class="wel-cont">Hi... {{i.name}},<br>
+      welcome to Sparks Bank, your best banking partner.</h2><br><br>
     {%endfor%}
     <table class="table table-hover ">
         <thead>
@@ -66,8 +66,13 @@
           {% endfor %}
         </tbody>
     </table>
+    <div class="alert alert-info" role="alert">
+      {% for message in messages %}
+      <h4 class="alert-heading">{{message}}</h4>
+      {%endfor%}
+    </div>
 
-    <section class="vh-100" style="background-color:">
+     <section class="vh-100" style="background-color:">
         <div class="container h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-12 col-xl-11">
@@ -77,40 +82,37 @@
                     <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                         <p class="para">Make your personal transactions here</p><br>
 
-                        <form class="mx-1 mx-md-4 pay-form">
-      
+                        <form class="mx-1 mx-md-4 pay-form" method="POST" action="">
+                           {% csrf_token %}
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                           <div class="form-outline flex-fill mb-0">
-                            {% for i in views%}
+                          {% for i in views%}
                             <input type="text" name="from" id="form3Example1c" class="form-control" value="{{i.name}}" placeholder="name" />
                             {% endfor%}
                           </div>
                         </div>
-      
-                        
-      
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>To</option>
+                            <div class="form-outline flex-fill mb-0">
+                            <select class="form-select" name="to" aria-label="Default select example">
+                                <option selected disabled>To</option>
                                 {% for i in dd%}
-                                <option value="1" name="to">{{i.name}}</option>
+                                <option value="{{i.name}}" >{{i.name}}</option>
                                 {%endfor%}
-                              </select>
+                            </select>
+                          </div>
                         </div>
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fa fa-money fa-2x" aria-hidden="true"></i>
                           <div class="form-outline flex-fill mb-0">
-                            <input type="number" name="amount" placeholder="Enter the amount to be transferred" id="form3Example3c" class="form-control" />
+                            <input type="text" name="amount" placeholder="Enter the amount to be transferred" id="form3Example3c" class="form-control" />
                           </div>
                         </div>
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                          <button type="button" class="btn btn-primary btn-lg">Transfer</button>
+                          <button class="btn btn-primary btn-lg">Transfer</button>
                         </div>
-      
                       </form>
-      
                     </div>
                     <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
       
@@ -124,7 +126,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> 
 </div>
 <footer class="text-center text-lg-start bg-dark text-white">
     <!-- Section: Social media -->
